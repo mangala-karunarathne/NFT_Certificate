@@ -1,33 +1,37 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-function login() {
+function Login() {
   return (
     <div>
-        <div>login</div>
-        <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-                <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-                </Form.Text>
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-                Submit
-            </Button>
-            </Form>
+        <div style={{display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        }}>
+            <h1>Login</h1>
+        </div>
+            <div  style={{
+                marginTop: "5%",
+                width: "50%", 
+                marginLeft: "25%"
+                }}>
+            <form>
+                <div className="mb-3">
+                    <label for="exampleInputEmail1" className="form-label">Email Address</label>
+                    <input type="email" className="form-control" id="exampleInputEmail1" 
+                    aria-describedby="emailHelp" placeholder='Enter your email'/>
+                </div>
+                <div className="mb-3">
+                    <label for="exampleInputPassword1" className="form-label">Password</label>
+                    <input type="password" className="form-control" id="exampleInputPassword1" 
+                    placeholder='Enter your password'/>
+                </div>
+                <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
+            </div>
     </div>
   )
 }
 
-export default login
+export default Login
 
