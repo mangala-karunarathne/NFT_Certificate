@@ -1,22 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-import Button from 'react-bootstrap/Button';
-import {BrowserRouter, Route, Router, Routes} from 'react-router-dom'
-import { Certificate } from './pages/certificate';
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import Login from './pages/login';
+import Admin from './pages/admin';
+import User from './pages/user';
 import Header from './pages/Header';
+import {Certificate} from './pages/certificate';
 
 function App() {
   return (
-    <div className="App">
-      <h1>NFT Certificate</h1>
-      <Header />
-      <Certificate />
-      <BrowserRouter> 
-          <Routes>
-            <Route path="/login" element={<login />} />
-          </Routes> 
-      </BrowserRouter>
-    </div>
+    <>
+    <Header/>
+    <BrowserRouter>
+        <Routes>
+          <Route exact path='/login' element={<Login/>}/>
+          <Route exact path='/admin' element={<Admin/>}/>
+          <Route exact path='/user' element={<User/>}/>
+          <Route exact path='/certificate' element={<Certificate/>}/>
+        </Routes>
+    </BrowserRouter>
+    </>
   );
 }
 
