@@ -6,8 +6,9 @@ export default function Header() {
 
     return (
         <div>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">  
-                <button class="badge badge-dark" onClick={connectWallet}>{!currentAccount ? 'Connect Wallet' : currentAccount}</button>
+            <nav className='page-header'>  
+                <h1 className='header-title'>NFT Certificate</h1>
+                <button className='wallet-button' onClick={connectWallet}>{!currentAccount ? 'Connect Wallet' : currentAccount}</button>
             </nav>
         </div>
     )

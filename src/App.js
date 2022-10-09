@@ -3,7 +3,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Login from './pages/login';
 import Admin from './pages/admin';
 import User from './pages/user';
-import Header from './pages/Header';
+import Header from './components/Header';
 import {Certificate} from './pages/certificate';
 
 function App() {
